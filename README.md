@@ -235,3 +235,6 @@ Sidechain C:  {130 100 70}<br/>
 A: 120<br/>
 B: 95<br/>
 C: 85<br/>
+<br/>
+ * Future Work *<br/>
+In the future I would like finish all of the consensus rules and then deploy the more developed version of this implementation online for some serious testing. This is really just meant to be a parallel version of Bitcoin but there are still a lot of things to iron out with having sidechains and deciding how to delegate miners primarily looking to keep the system balanced and secure. Updated rules for validator nodes and forking more chains under load are other things to think about as well. I think the benefit of this system potentially could be in its simplicity.<br/>

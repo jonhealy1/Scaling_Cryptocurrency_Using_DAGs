@@ -1,8 +1,13 @@
-./Parallel_POW
 
-1: Account A sends Account B 10$...
-2: Account B sends Account C 10$...
-3: Account C sends Account A 10$...
+This program creates 4 Blockchains all running in parallel. 3 sidechains and the main chain. Each sidechain forks off from the main chain and is given a certain set of transactions to work on which would be theoretically divided by the address of the person sending a transaction. In this example sidechain A handles transactions sent by account A, sidechain B handles transactions sent by account B, and sidechain C handles transactions sent by account C. After 2 blocks, the sidechains all append their final values to the main chain. <br/>
+
+For a more detailed explanation of how this system works, see the pdf file provided in this repository. Note: In this example all of the accounts start with 100$. Chains are only making changes to values contained on that chain and because each chain is responsible for a different set of accounts sending value, no account can spend more money than they have.<br/>
+
+./Parallel_POW<br/>
+
+1: Account A sends Account B 10$...<br/>
+2: Account B sends Account C 10$...<br/>
+3: Account C sends Account A 10$...<br/>
 
 814e325659746b0a3e86dcf33e2ffc2977c93669cb000ad31e3128906c0a9ab0  do more work!  3
 d3590d7547d4c05a68cc6bd2daea320e51feb0c35937f46df09985a3cdfd15ba  do more work!  1
@@ -184,48 +189,49 @@ fbd68eaaa242d5db1c6ae81ae6c56c2f5dd6fa5aaf6b56ccf9a28a51ca3a3499  do more work! 
 27db6753d03de8cb0a3282fd31cb5befb8ffcb3aee00679a41229260376a8247  do more work!  4
 b3fa86c90f41aa936ff683392ee494c77b3336a06f097c07964315cd5e6aeeb4  do more work!  4
 b550e9abac215af9224d94a0342a0d2b2a799f467163f26f3a4bbe5ffdce2463  do more work!  4
-### 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359  work done!  A sends C 5
+### 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359  work done!  A sends C 5<br/>
 
-Side Chain A, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }
+Side Chain A, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }<br/>
 
-Side Chain A, Block: 1 {1 2018-12-13 14:58:54.625475699 -0800 PST 90 110 100 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 19}
+Side Chain A, Block: 1 {1 2018-12-13 14:58:54.625475699 -0800 PST 90 110 100 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 19}<br/>
 
-Side Chain A, Block: 2 {2 2018-12-13 14:59:44.710988131 -0800 PST 85 110 105 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 1 22}
+Side Chain A, Block: 2 {2 2018-12-13 14:59:44.710988131 -0800 PST 85 110 105 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 1 22}<br/>
 
-Side Chain B, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }
+Side Chain B, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }<br/>
 
-Side Chain B, Block: 1 {1 2018-12-13 14:58:54.625556299 -0800 PST 100 90 110 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 29}
+Side Chain B, Block: 1 {1 2018-12-13 14:58:54.625556299 -0800 PST 100 90 110 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 29}<br/>
 
-Side Chain B, Block: 2 {2 2018-12-13 14:59:44.711069385 -0800 PST 105 85 110 0a01a59100ff0d32241ad136698ee1f3d1dda4cc47ce6946d4aca01893c8a2fd 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 1 c}
+Side Chain B, Block: 2 {2 2018-12-13 14:59:44.711069385 -0800 PST 105 85 110 0a01a59100ff0d32241ad136698ee1f3d1dda4cc47ce6946d4aca01893c8a2fd 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 1 c}<br/>   
 
-Side Chain C, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }
+Side Chain C, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }<br/>
 
-Side Chain C, Block: 1 {1 2018-12-13 14:58:54.625470568 -0800 PST 110 100 90 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 32}
+Side Chain C, Block: 1 {1 2018-12-13 14:58:54.625470568 -0800 PST 110 100 90 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 32}<br/>
 
-Side Chain C, Block: 2 {2 2018-12-13 14:59:44.710979405 -0800 PST 130 100 70 08d725d43e75f637c582c41b0d15334f33a6e27f858b7ac73774b13dcf7ea21b 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 1 8}
+Side Chain C, Block: 2 {2 2018-12-13 14:59:44.710979405 -0800 PST 130 100 70 08d725d43e75f637c582c41b0d15334f33a6e27f858b7ac73774b13dcf7ea21b 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 1 8}<br/>
 
-Main Block Chain, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }
+Main Block Chain, Block: 0 {0 2018-12-13 14:58:54.624422058 -0800 PST 100 100 100 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0  1 }<br/>
 
-Main Block Chain, Block: 1 {1 2018-12-13 14:58:54.625475699 -0800 PST 90 110 100 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 19}
+Main Block Chain, Block: 1 {1 2018-12-13 14:58:54.625475699 -0800 PST 90 110 100 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 19}<br/>
 
-Main Block Chain, Block: 2 {2 2018-12-13 14:59:44.710988131 -0800 PST 85 110 105 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 1 22}
+Main Block Chain, Block: 2 {2 2018-12-13 14:59:44.710988131 -0800 PST 85 110 105 015c31186d6fef67c81960f370f35f0df8c9e388059eee2e8f636584322af359 040a0c1a4a44afe1ab6ece6e7f04fcdc5ea76b7f8cdfe9d6b9d9c6df5ce8a90d 1 22}<br/>
 
-Main Block Chain, Block: 3 {1 2018-12-13 14:58:54.625556299 -0800 PST 100 90 110 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 29}
+Main Block Chain, Block: 3 {1 2018-12-13 14:58:54.625556299 -0800 PST 100 90 110 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 29}<br/>
 
-Main Block Chain, Block: 4 {2 2018-12-13 14:59:44.711069385 -0800 PST 105 85 110 0a01a59100ff0d32241ad136698ee1f3d1dda4cc47ce6946d4aca01893c8a2fd 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 1 c}
+Main Block Chain, Block: 4 {2 2018-12-13 14:59:44.711069385 -0800 PST 105 85 110 0a01a59100ff0d32241ad136698ee1f3d1dda4cc47ce6946d4aca01893c8a2fd 067cb173668c0ff09b1120c36ea3a173e18750736b29ba5c8f39153d6a0c83e6 1 c}<br/>
 
-Main Block Chain, Block: 5 {1 2018-12-13 14:58:54.625470568 -0800 PST 110 100 90 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 32}
+Main Block Chain, Block: 5 {1 2018-12-13 14:58:54.625470568 -0800 PST 110 100 90 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 9af15b336e6a9619928537df30b2e6a2376569fcf9d7e773eccede65606529a0 1 32}<br/>
 
-Main Block Chain, Block: 6 {2 2018-12-13 14:59:44.710979405 -0800 PST 120 95 85 08d725d43e75f637c582c41b0d15334f33a6e27f858b7ac73774b13dcf7ea21b 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 1 8}
+Main Block Chain, Block: 6 {2 2018-12-13 14:59:44.710979405 -0800 PST 120 95 85 08d725d43e75f637c582c41b0d15334f33a6e27f858b7ac73774b13dcf7ea21b 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855 1 8}<br/>
 
-*** Account Values on Each Sidechain ***
-* Only accounts that a sidechain is responsible for get decremented
-Sidechain A:  {85 110 105}
-Sidechain B:  {105 85 110}
-Sidechain C:  {130 100 70}
+*** Account Values on Each Sidechain ***<br/>
+* Only accounts that a sidechain is responsible for get decremented<br/>
+Sidechain A:  {85 110 105}<br/>
+Sidechain B:  {105 85 110}<br/>
+Sidechain C:  {130 100 70}<br/>
 
-*** Final Results on the Main Blockchain ***
-* These are the average results for the accounts taken from the values recorded on each sidechain
-A: 120
-B: 95
-C: 85
+*** Final Results on the Main Blockchain ***<br/>
+* These are the average results for the accounts taken from the values recorded on each sidechain<br/>
+* For example Account A spent 15 in total on sidechain A and received 5 on B and 30 on C, for a grand total of 20. Each account started with 100 so A has 100 + 20 at the end for 120. <br/>
+A: 120<br/>
+B: 95<br/>
+C: 85<br/>

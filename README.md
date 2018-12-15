@@ -127,11 +127,11 @@ b10772d5aebd40a9fce468a5e6585021b848a5b64d1c3d1969b1dc38b99c7e2e  do more work! 
 ec120b9635e2eacadd33be0ae402f251f73639a22eb2add7186f329e58465cc9  do more work!  3
 ee980525ac4d2af3fbc9a3849430ca293188661f4d825a3e20edd2ea5d7cabac  do more work!  3
 333885293db60815fa3ca712372c64f3bb91ff2ac843849345f83f69b1e9eca4  do more work!  3
-### 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855  work done!  3: C sends A 10
+### 086ea6415d03926edc2a71d9c221a06b05cb261603006219612f4f71eb0a2855  work done!  3: C sends A 10<br/>
 
-4: Account A sends Account C 5$...
-5: Account B sends Account A 5$...
-6: Account C sends Account A 20$...
+4: Account A sends Account C 5$...<br/>
+5: Account B sends Account A 5$...<br/>
+6: Account C sends Account A 20$...<br/>
 
 4575974d77b7f081cfdfe37c8bc356390a2621bd82a0fe8272841be2362015e5  do more work!  6
 9852a8b6070dd32f9692b9dd6d1c530e8100b8c338db4321998ed7b06005c7ed  do more work!  4

@@ -1,3 +1,4 @@
+video demo: https://youtu.be/t1tExLFP4vI
 
 This program creates 4 Blockchains all running in parallel. 3 sidechains and the main chain. Each sidechain forks off from the main chain and is given a certain set of transactions to work on which would be theoretically divided by the address of the person sending a transaction. In this example sidechain A handles transactions sent by account A, sidechain B handles transactions sent by account B, and sidechain C handles transactions sent by account C. After 2 blocks, the sidechains all append their final values to the main chain. <br/>
 

@@ -1,5 +1,7 @@
 video demo: https://youtu.be/t1tExLFP4vI
 
+*** As can be seen on the video link, I didn't upload my video until Dec.21st, well after the due date for this project. Initially, I forgot to do the video as I was super busy with studying for finals. Furthermore I did not realize the video was worth so many marks and should have looked at the outline posted on coursespaces. I also added comments to my code at the same time. I have decided to add this explanation just so everything is clear, beyond looking at the upload dates on youtube and github.
+
 This program creates 4 Blockchains all running in parallel. 3 sidechains and the main chain. Each sidechain forks off from the main chain and is given a certain set of transactions to work on which would be theoretically divided by the address of the person sending a transaction. In this example sidechain A handles transactions sent by account A, sidechain B handles transactions sent by account B, and sidechain C handles transactions sent by account C. After 2 blocks, the sidechains all append their final values to the main chain. <br/>
 
 For a more detailed explanation of how this system works, see the pdf file provided in this repository. Note: In this example all of the accounts start with 100$. Chains are only making changes to values contained on that chain and because each chain is responsible for a different set of accounts sending value, no account can spend more money than they have.<br/>
